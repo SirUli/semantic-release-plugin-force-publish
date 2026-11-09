@@ -1,0 +1,55 @@
+{
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "git.alwaysSignOff": true,
+    "git.autofetch": true,
+    "git.branchPrefix": "feature-",
+    "git.branchProtection": [
+        "main",
+        "master",
+        "release",
+        "develop"
+    ],
+    "git.branchRandomName.dictionary": [
+        "animals"
+    ],
+    "git.branchRandomName.enable": true,
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+    "git.allowForcePush": true,
+    "git.allowNoVerifyCommit": true,
+    "workbench.editor.enablePreview": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.fontLigatures": false,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "yaml.customTags": [
+        "!reference sequence",
+        "!ENV scalar",
+        "!ENV sequence",
+        "!relative scalar",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+        "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+        "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+    ],
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    "testing.openTesting": "openOnTestFailure",
+    "testing.defaultGutterClickAction": "contextMenu",
+    "testing.automaticallyOpenTestResults": "openOnTestFailure"
+}

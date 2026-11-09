@@ -1,0 +1,31 @@
+{
+  "name": "semantic-release-plugin-force-publish",
+  "version": "1.0.0",
+  "description": "Semantic-release plugin that forces a release by using an environment variable to reply to the commit-analyzer with a defined release type.",
+  "main": "index.js",
+  "packageManager": "yarn@4.17.1",
+  "keywords": [],
+  "author": "SirUli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirUli/semantic-release-plugin-force-publish.git"
+  },
+  "homepage": "https://github.com/SirUli/semantic-release-plugin-force-publish#readme",
+  "bugs": {
+    "url": "https://github.com/SirUli/semantic-release-plugin-force-publish/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.1.10",
+    "vitest": "4.1.10",
+    "yarn-upgrade-all": "0.8.1"
+  },
+  "scripts": {
+    "test": "NODE_OPTIONS=\"--localstorage-file=/tmp/node-localstorage-$(head /dev/urandom | tr -dc a-zA-Z0-9 | head -c 8)\" vitest run --coverage",
+    "upgrade": "yarn yarn-upgrade-all"
+  }
+}

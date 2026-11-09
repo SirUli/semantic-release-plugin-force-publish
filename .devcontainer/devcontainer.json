@@ -1,0 +1,43 @@
+{
+  "name": "semantic-release-plugin-force-publish",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "eslint.alwaysShowStatus": true,
+        "yaml.customTags": [
+          "!ENV scalar",
+          "!ENV sequence",
+          "tag:yaml.org,2002:python/name:materialx.emoji.to_svg",
+          "tag:yaml.org,2002:python/name:materialx.emoji.twemoji",
+          "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format"
+        ]
+      },
+      "extensions": [
+        "brunnerh.insert-unicode",
+        "clover.md-table-editor",
+        "codezombiech.gitignore",
+        "DavidAnson.vscode-markdownlint",
+        "darkriszty.markdown-table-prettify",
+        "dbaeumer.vscode-eslint",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow",
+        "redhat.vscode-xml",
+        "redhat.vscode-yaml",
+        "TLahmann.alex-linter",
+        "github.copilot-chat",
+        "waderyan.gitblame",
+        "yzhang.markdown-all-in-one",
+      ]
+    }
+  },
+  "remoteUser": "node",
+  "updateContentCommand": "yarn install",
+  "onCreateCommand": "sudo corepack enable",
+}
