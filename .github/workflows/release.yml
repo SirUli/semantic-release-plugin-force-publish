@@ -28,7 +28,7 @@ jobs:
       - run: >
           npx --yes
           -p semantic-release
-          -p conventional-changelog-conventionalcommits
+          -p conventional-changelog-conventionalcommits@9
           -p @semantic-release/git
           semantic-release
         env:
