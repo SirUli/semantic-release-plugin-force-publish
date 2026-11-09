@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      force_release:
+        type: boolean
+        description: Release even if no commit triggers one
 
 permissions: {}
 
@@ -34,3 +38,4 @@ jobs:
           semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CREATE_RELEASE: ${{ inputs.force_release && '1' || '' }}
