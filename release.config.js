@@ -1,4 +1,6 @@
-{
+// The plugin is passed in as an object on purpose: semantic-release resolves string
+// paths like "./index.js" relative to its own install directory, not this repository.
+module.exports = {
   "tagFormat": "v${version}",
   "branches": [
     "main"
@@ -7,7 +9,7 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     [
-      "./index.js",
+      require("./index.js"),
       {
         "releaseType": "patch"
       }
@@ -68,4 +70,4 @@
     ],
     "@semantic-release/github"
   ]
-}
+};
