@@ -206,6 +206,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@siruli/semantic-release-plugin-force-publish@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@siruli/semantic-release-plugin-force-publish@workspace:."
+  dependencies:
+    "@vitest/coverage-v8": "npm:5.1.0"
+    vite: "npm:8.3.7"
+    vitest: "npm:5.1.0"
+    yarn-upgrade-all: "npm:0.8.1"
+  languageName: unknown
+  linkType: soft
+
 "@types/chai@npm:^5.2.2":
   version: 5.2.3
   resolution: "@types/chai@npm:5.2.3"
@@ -736,17 +747,6 @@ __metadata:
   checksum: 10c0/7b84dcb9d1946d7c76a7b18dd95b6d35c7e6c965d3f70ffee586d46a744debaf483ffce2dd241d3f411fde2bac925f2549499548fc1b52a8bfa0ce0fcf55bb4f
   languageName: node
   linkType: hard
-
-"semantic-release-plugin-force-publish@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "semantic-release-plugin-force-publish@workspace:."
-  dependencies:
-    "@vitest/coverage-v8": "npm:5.1.0"
-    vite: "npm:8.3.7"
-    vitest: "npm:5.1.0"
-    yarn-upgrade-all: "npm:0.8.1"
-  languageName: unknown
-  linkType: soft
 
 "semver@npm:^7.3.5":
   version: 7.8.6

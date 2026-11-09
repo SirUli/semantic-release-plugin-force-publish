@@ -1,5 +1,5 @@
 {
-  "name": "semantic-release-plugin-force-publish",
+  "name": "@siruli/semantic-release-plugin-force-publish",
   "version": "1.0.0",
   "description": "Semantic-release plugin that forces a release by using an environment variable to reply to the commit-analyzer with a defined release type.",
   "main": "index.js",
