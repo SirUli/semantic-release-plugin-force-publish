@@ -7,19 +7,25 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write # coverage comment
+  code-quality: write # upload coverage to GitHub Code Quality
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v7
         with:
           node-version: 24
       - run: corepack enable
       - run: yarn install --immutable
       - run: yarn test
-      - uses: davelosert/vitest-coverage-report-action@74c2d9210b4fc44c84d8213f61d7ec99837b7aa0 # v2.13.2
-        if: always() && github.event_name == 'pull_request'
-        continue-on-error: true # read-only token on fork/Dependabot PRs cannot comment
+      - name: Upload coverage report
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/upload-code-coverage@2b21a77928be8d5168c2b9581a67f2adbebacc52 # v1.4.4
+        with:
+          file: coverage/cobertura-coverage.xml
+          language: JavaScript
+          label: code-coverage/vitest

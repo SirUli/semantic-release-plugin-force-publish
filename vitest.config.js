@@ -4,7 +4,7 @@ module.exports = {
     globals: true,
     coverage: {
       provider: "v8",
-      reporter: ["text", "text-summary", "json-summary", "json"],
+      reporter: ["text", "text-summary", "cobertura"],
       include: ["index.js"],
       reportsDirectory: "./coverage",
     },
