@@ -7,6 +7,12 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     [
+      "./index.js",
+      {
+        "releaseType": "patch"
+      }
+    ],
+    [
       "@semantic-release/release-notes-generator",
       {
         "preset": "conventionalcommits",
