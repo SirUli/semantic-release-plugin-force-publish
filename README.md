@@ -1,4 +1,4 @@
-# @siruli/semantic-release-plugin-force-publish
+# semantic-release-plugin-force-publish
 
 A [semantic-release](https://github.com/semantic-release/semantic-release) plugin that lets you force a release from CI, even when none of the commits would trigger one.
 
@@ -11,13 +11,13 @@ This plugin gives you a switch for that. It checks an environment variable. If t
 ## Installation
 
 ```sh
-npm install --save-dev @siruli/semantic-release-plugin-force-publish
+npm install --save-dev semantic-release-plugin-force-publish
 ```
 
 or with yarn:
 
 ```sh
-yarn add --dev @siruli/semantic-release-plugin-force-publish
+yarn add --dev semantic-release-plugin-force-publish
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Add the plugin to the `plugins` list in your semantic-release configuration:
   "plugins": [
     "@semantic-release/commit-analyzer",
     [
-      "@siruli/semantic-release-plugin-force-publish",
+      "semantic-release-plugin-force-publish",
       {
         "releaseType": "patch",
         "releaseVariable": "CREATE_RELEASE",
